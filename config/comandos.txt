@@ -1,0 +1,23 @@
+docker-compose -f .\docker-compose-services-mq.yml up -d
+
+ 
+ 
+ 
+py -m venv myvenv
+ 
+ 
+ 
+Set-ExecutionPolicy RemoteSigned
+ 
+ 
+ pip install -r requirements.txt
+ 
+ 
+Git
+Docker y WSL2
+Netcore8
+Python
+Visual studio code
+visual studio community
+Postman
+Crear cuenta en GitHub
