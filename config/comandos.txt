@@ -4,6 +4,8 @@ https://github.com/GiovannyCholcaITSJapon/appDistri2026_2.git
 
 docker-compose -f .\docker-compose-services-mq.yml up -d
 
+docker-compose -f .\docker-compose-databases.yml up -d
+
  
 py -m venv myvenv
  
