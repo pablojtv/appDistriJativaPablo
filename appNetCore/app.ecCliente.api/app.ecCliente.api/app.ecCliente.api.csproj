@@ -14,4 +14,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\app.ecCliente.dataAccess\app.ecCliente.dataAccess.csproj" />
+    <ProjectReference Include="..\app.ecCliente.services\app.ecCliente.services.csproj" />
+  </ItemGroup>
+
 </Project>

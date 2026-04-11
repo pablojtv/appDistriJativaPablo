@@ -1,4 +1,7 @@
+using app.clientesChGio.services.Implementations;
 using app.ecCliente.dataAccess.context;
+using app.ecCliente.dataAccess.repositories;
+using app.ecCliente.services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +24,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 
+//declarar servicio y repositorios
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 
 var app = builder.Build();
