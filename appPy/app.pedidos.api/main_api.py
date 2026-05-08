@@ -3,6 +3,8 @@ from http.client import HTTPResponse
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi import FastAPI
 
+from fastapi.middleware.cors import CORSMiddleware
+
 from app.api.routes import router
 from app.api.factura_routes import router as factura_router
 
@@ -18,6 +20,16 @@ app = FastAPI()
 app.title = "Api service ECPedidos"
 
 app.version = "0.0.1"
+
+
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # Code First
